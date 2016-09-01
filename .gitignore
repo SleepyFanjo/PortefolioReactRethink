@@ -1,0 +1,16 @@
+# MicroKernel Cache and Logs
+/var/cache/*
+/var/logs/*
+!var/cache/.gitkeep
+!var/logs/.gitkeep
+
+# composer
+/vendor/
+
+# Built assets
+/web/css/*
+/web/js/*
+!web/css/.gitkeep
+!web/js/.gitkeep
+
+!.gitkeep
