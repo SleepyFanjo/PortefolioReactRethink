@@ -1,8 +1,8 @@
 # MicroKernel Cache and Logs
-/var/cache/*
-/var/logs/*
-!var/cache/.gitkeep
-!var/logs/.gitkeep
+/app/cache/*
+/app/logs/*
+!app/cache/.gitkeep
+!app/logs/.gitkeep
 
 # composer
 /vendor/
