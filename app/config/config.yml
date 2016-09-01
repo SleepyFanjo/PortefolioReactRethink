@@ -1,0 +1,4 @@
+framework:
+    secret: fwehf784gj34jgn
+    templating:
+        engines: ['twig']
