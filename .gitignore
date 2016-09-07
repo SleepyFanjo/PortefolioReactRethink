@@ -4,6 +4,10 @@
 !app/cache/.gitkeep
 !app/logs/.gitkeep
 
+#node
+/node_modules
+npm-debug.log
+
 # composer
 /vendor/
 
