@@ -12,6 +12,6 @@ class AppController extends Controller
      */
     public function homeAction()
     {
-        return $this->render('hello-world.html.twig');
+       return $this->render('home.html.twig');
     }
 }
