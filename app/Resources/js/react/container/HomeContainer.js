@@ -3,13 +3,13 @@ import autobind from 'autobind-decorator'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 
+import HomeComponent from '../component/HomeComponent'
+
 class HomeContainer extends Component
 {
     render() {
         return (
-            <div className="home-component">
-                This is my home component
-            </div>
+            <HomeComponent />
         )
     }
 }

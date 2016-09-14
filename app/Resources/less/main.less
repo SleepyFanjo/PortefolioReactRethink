@@ -1,6 +1,21 @@
 @import 'npm://bootstrap/less/bootstrap';
+@import 'variables';
+@import 'https://fonts.googleapis.com/css?family=Lato';
+@import 'modules';
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 html, body {
-    width: 100%;
-    background-color: red;
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    background-color: @background-color;
+    -webkit-transform: translateZ(0);
+   -moz-transform: translateZ(0);
+   -ms-transform: translateZ(0);
+   -o-transform: translateZ(0);
+   transform: translateZ(0);
 }
