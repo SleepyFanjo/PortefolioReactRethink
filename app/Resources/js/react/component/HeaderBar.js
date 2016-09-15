@@ -10,20 +10,20 @@ export default class HeaderBar extends Component
 
     render() {
         return (
-            <div className="header-bar">
-                <div className="wrapper">
-                    <div className="header-intro">
+            <header>
+                <div id="header-wrapper">
+                    <div id="header-intro">
                         Portefolio
                     </div>
-                    <div className="trigger-button">
-                        <div className={"hamburger " + (this.state.expanded ? 'open' : '')} onClick={() => this.setState({expanded: !this.state.expanded})}>
+                    <div id="header-trigger-button">
+                        <div id="header-hamburger" className={this.state.expanded ? 'open' : ''} onClick={() => this.setState({expanded: !this.state.expanded})}>
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
                     </div>
                 </div>
-                <div className={"scrolling-menu " + (this.state.expanded ? 'displayed' : '')}>
+                <div id="header-scrolling-menu" className={this.state.expanded ? 'displayed' : ''}>
                     <ul>
                         <li>Home</li>
                         <li>About Me</li>
@@ -31,7 +31,7 @@ export default class HeaderBar extends Component
                         <li>Contact</li>
                     </ul>
                 </div>
-            </div>
+            </header>
         )
     }
 }
