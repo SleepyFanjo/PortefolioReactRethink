@@ -14,7 +14,7 @@ header {
         top: 0;
         left: 0;
         right: 0;
-        z-index: 10;
+        z-index: 91;
         background-color: @menu-background;
     }
 
@@ -22,13 +22,13 @@ header {
         background-color: @menu-background;
         padding-left: 54px;
         border-top: 2px solid @box-color;
-        transition: all 0.9s ease-in-out;
+        transition: cubic-bezier(0.5, 0.5, 0.25, 1.233) 0.6s;
         transition-property: top;
         position: absolute;
         top: -200px;
         left: 0;
         right: 0;
-        z-index: 5;
+        z-index: 90;
 
         ul, li {
             list-style-type: none;
@@ -131,6 +131,7 @@ header {
         top: 0;
         left: 0;
         right: auto;
+        z-index: 92;
 
         #header-wrapper {
             right: auto;
