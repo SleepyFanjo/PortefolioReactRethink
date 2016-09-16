@@ -2,3 +2,31 @@
 @background-color: #F3E9D2;
 @menu-background: #1d1f20;
 @box-color: #d3531a;
+
+.aspect-ratio(@width, @height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: (@height / @width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    padding:10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.aspect-ratio-16-9 {
+    .aspect-ratio(9, 16);
+}
+
+@media (min-width: @breakpoint) {
+  .aspect-ratio-16-9 {
+    .aspect-ratio(16, 9);
+}
+}

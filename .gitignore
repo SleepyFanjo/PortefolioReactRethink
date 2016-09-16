@@ -17,4 +17,7 @@ npm-debug.log
 !web/css/.gitkeep
 !web/js/.gitkeep
 
+#Editor conf
+.vscode
+
 !.gitkeep
