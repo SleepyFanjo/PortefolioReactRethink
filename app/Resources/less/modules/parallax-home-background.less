@@ -1,0 +1,106 @@
+@import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
+
+@primary-color: #1e90ff ;
+@secondary-color: #ffe221;
+@tertiary-color: #ffffff;
+
+#parallax-home-background {
+    background-image: url(/images/home-background.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100vh;
+    font-family: 'Baloo Paaji', cursive;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+
+    .container{
+        width: 80%;
+        height: 60vh;
+        position: relative;
+    }
+
+    h1, h2 {
+        font-size: 75px;
+        text-transform: uppercase;
+        text-align: center;
+  
+        span {
+            width: 100%;
+            float: left;
+            color: @tertiary-color;
+            -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+            clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+            transform: translateY(-50px);
+            opacity: 0;
+            animation-name: titleAnimation;
+            animation-timing-function:ease;
+            animation-duration: 3s;
+        }
+    }
+
+    h1 span {
+        animation-delay: 0.6s;
+        -webkit-animation-fill-mode: forwards;
+
+        &:first-child {
+            animation-delay: 0.7s;
+
+        }
+
+        &:last-child {
+            color: @secondary-color;
+            animation-delay: 0.5s;
+        }
+    }
+
+    h2 { 
+        top: 0;
+        position: absolute;
+        
+        span {
+            animation-delay: 4.1s;
+            -webkit-animation-fill-mode: forwards;
+
+            &:first-child {
+            animation-delay: 4.2s;
+
+            }
+
+            &:last-child {
+            color: @secondary-color;
+            animation-delay: 4s;
+            }
+        }
+    }
+}
+
+@keyframes titleAnimation {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  }
+  20% {
+      transform: translateY(0);
+      opacity: 1;
+      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 30%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 30%);
+  }
+  80% {
+       transform: translateY(0);
+       opacity: 1;
+      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 30%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 30%);
+  }
+  100% {
+       transform: translateY(50px);
+       opacity: 0;
+      -webkit-clip-path: polygon(100% 0, 100% -30%, 0 100%, 0 100%);
+      clip-path: polygon(100% 0, 100% -30%, 0 100%, 0 100%);
+  }
+}
