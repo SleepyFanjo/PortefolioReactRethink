@@ -8,16 +8,16 @@ export default class ParallaxHomeBackground extends Component
         return (
             <div id="parallax-home-background">
                 <section className="container">
-                    <h1 className="title">
-                        <span>Coucou toi :)</span>
-                        <span>Du saumon en papillote</span>
-                        <span>Avec du riz, ca te va ?</span>
-                    </h1>
                     <h2 className="title">
-                        <span>Quentin Chevrin</span>
-                        <span>FullStack Web Developer</span>
-                        <span>Freelancer</span>
+                        <span>Hi, Welcome</span>
+                        <span>Have a look at my work</span>
+                        <span>Enjoy :)</span>
                     </h2>
+                    <h1 className="title">
+                        <span>Quentin Chevrin</span>
+                        <span>Freelancer</span>
+                        <span>FullStack Web Developer</span>
+                    </h1>
                 </section>
             </div>
         )
