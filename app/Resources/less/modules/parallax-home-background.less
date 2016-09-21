@@ -14,109 +14,74 @@
     display: flex;
 	justify-content: center;
 	align-items: center;
+}
 
-    .container{
-        width: 80%;
-        position: relative;
+#card {
+    perspective: 800px;
+    width: 400px;
+    height: 550px;
+    position: relative;
+    cursor: pointer;
+
+    span.glyphicon {
+        position: absolute;
+        color: @secondary-color;
+        z-index: 1;
+        font-size: 2.5rem;
+        top: 10px;
+        right: 10px;
+    }
+
+    div.card-container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        transition: transform 1s;
+    }
+
+    div.card-container.flipped {
+        transform: rotateY( 180deg );
     }
 
     h1, h2 {
+        margin: 0;
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
         font-size: 4.5rem;
         text-transform: uppercase;
         text-align: center;
+        background-color: #1d1f20;
+        padding: 50px 20px;
 
         span {
             width: 100%;
-            float: left;
+            display: block;
             margin-bottom: 20px;
             color: @primary-color;
-            -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-            clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-            transform: translateY(-50px);
-            opacity: 0;
-        }
-    }
-
-    h2 span {
-        animation-name: titleAnimation;
-        animation-timing-function: ease;
-        animation-duration: 3s;
-        animation-delay: 0.6s;
-        -webkit-animation-fill-mode: forwards;
-
-        &:first-child {
-            animation-delay: 0.7s;
-
-        }
-
-        &:last-child {
-            color: @secondary-color;
-            animation-delay: 0.5s;
-        }
-    }
-
-    h1 {
-        top: 0;
-        position: absolute;
-
-        span {
-            animation-name: titleAnimation2;
-            animation-timing-function: ease;
-            animation-duration: 1s;
-            animation-delay: 4.1s;
-            -webkit-animation-fill-mode: forwards;
-
-            &:first-child {
-            animation-delay: 4.2s;
-
-            }
 
             &:last-child {
-            color: @secondary-color;
-            animation-delay: 4s;
+                color: @secondary-color;
             }
         }
     }
-}
 
-@keyframes titleAnimation {
-    0% {
-      transform: translateY(-50px);
-      opacity: 0;
-      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-  }
-  20% {
-      transform: translateY(0);
-      opacity: 1;
-      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0%);
-      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 30%);
-  }
-  80% {
-       transform: translateY(0);
-       opacity: 1;
-      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0%);
-      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 30%);
-  }
-  100% {
-       transform: translateY(50px);
-       opacity: 0;
-      -webkit-clip-path: polygon(100% 0, 100% -30%, 0 100%, 0 100%);
-      clip-path: polygon(100% 0, 100% -30%, 0 100%, 0 100%);
-  }
-}
-
-@keyframes titleAnimation2 {
-    0% {
-        transform: translateY(-50px);
-        opacity: 0;
-        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    h2 {
+        transform: rotateY( 180deg );
+        padding-top: 80px;
     }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0%);
-        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 30%);
+}
+
+@media (min-width: @breakpoint) {
+    #card {
+        width: 768px;
+        height: 383px;
+
+        h2 {
+            padding-top: 50px;
+        }
     }
 }
