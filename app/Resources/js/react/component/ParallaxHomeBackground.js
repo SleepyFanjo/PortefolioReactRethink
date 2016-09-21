@@ -13,8 +13,8 @@ export default class ParallaxHomeBackground extends Component
             <div id="parallax-home-background">
                 <section id="card">
                     <div className={this.state.flipped ? "card-container flipped" : "card-container"} onClick={() => this.setState({flipped: !this.state.flipped})}>
-                        <span className="glyphicon glyphicon-share-alt"></span>
                         <h1 className="title">
+                            <span className="glyphicon glyphicon-share-alt"></span>
                             <span>Quentin Chevrin</span>
                             <span>Freelancer</span>
                             <span>FullStack Web Developer</span>
