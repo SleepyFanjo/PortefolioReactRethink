@@ -12,6 +12,9 @@ export default class HomeComponent extends Component
             <div>
                 <HeaderBar />
                 <ParallaxHomeBackground />
+                <div style={{height: 300 }}>
+                    Placeholder
+                </div>
             </div>
         )
     }

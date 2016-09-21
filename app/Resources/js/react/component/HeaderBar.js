@@ -10,7 +10,7 @@ export default class HeaderBar extends Component
 
     render() {
         return (
-            <header>
+            <div id="header">
                 <div id="header-wrapper">
                     <div id="header-intro">
                         Portefolio
@@ -31,7 +31,7 @@ export default class HeaderBar extends Component
                         <li>Contact</li>
                     </ul>
                 </div>
-            </header>
+            </div>
         )
     }
 }
