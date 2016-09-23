@@ -5,10 +5,11 @@
   "scripts": {
     "build:less": "lessc --npm-import --autoprefix=\"last 2 versions\" -s app/Resources/less/main.less web/css/main.css",
     "build:js": "browserify -o web/js/app.js app/Resources/js/react/app.js",
-    "build": "parallelshell 'npm run build:js' 'npm run build:less'",
+    "build": "parallelshell 'npm run build:js' 'npm run build:js:php' 'npm run build:less'",
     "watch": "parallelshell 'npm run watch:less' 'npm run watch:js'",
     "watch:less": "onchange app/Resources/less/**/*.less -- npm run build:less",
-    "watch:js": "watchify -o web/js/app.js app/Resources/js/react/app.js"
+    "watch:js": "watchify -o web/js/app.js app/Resources/js/react/app.js",
+    "build:js:php": "browserify -o web/js/react.bundle.js app/Resources/js/ssr/react-bundle.js ; browserify -o web/js/app.bundle.js app/Resources/js/ssr/app.js"
   },
   "author": "Quentin Chevrin",
   "devDependencies": {

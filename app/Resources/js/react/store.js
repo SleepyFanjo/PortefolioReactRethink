@@ -11,9 +11,9 @@ const middleware = [
 ]
 
 // doc: Wire up store enhancers, middleware and reducers (inc. Redux DevTools)
-function buildStore() {
+function buildStore(preloadedState) {
     const enhancer = compose(applyMiddleware(...middleware), window.devToolsExtension ? window.devToolsExtension() : f => f);
-    const store = createStore(reducer, window.__INITIAL_STATE__, enhancer);
+    const store = createStore(reducer, preloadedState, enhancer);
 
     return store
 }

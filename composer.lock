@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cfb06bdc511c73806fe3a72abc8865dd",
-    "content-hash": "7f211122b60a3939836d4377ce47544e",
+    "hash": "44e2423c20e0a6c6882d0c29c3041975",
+    "content-hash": "bdd18ede13607f3ccd370c44140c4e85",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -404,6 +404,58 @@
                 "parser"
             ],
             "time": "2014-09-09 13:34:57"
+        },
+        {
+            "name": "koriym/redux-react-ssr",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/koriym/Koriym.ReduxReactSsr.git",
+                "reference": "1ae9495dbc3187fd21ccf7cf0e46418488393648"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/koriym/Koriym.ReduxReactSsr/zipball/1ae9495dbc3187fd21ccf7cf0e46418488393648",
+                "reference": "1ae9495dbc3187fd21ccf7cf0e46418488393648",
+                "shasum": ""
+            },
+            "require": {
+                "ext-v8js": ">=1.3.0",
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "~2.4",
+                "phpunit/phpunit": "~4.8 || ~5.0",
+                "phpv8/v8js-stubs": "~1.2",
+                "squizlabs/php_codesniffer": "~2.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Koriym\\ReduxReactSsr\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Akihito Koriyama",
+                    "email": "akihito.koriyama@gmail.com"
+                },
+                {
+                    "name": "Shingo Kumagai",
+                    "email": "shingo4092@gmail.com"
+                }
+            ],
+            "description": "Redux ReactJS server side rendering using v8js",
+            "homepage": "https://github.com/koriym/PHP.Skeleton",
+            "keywords": [
+                "Skeleton",
+                "psr"
+            ],
+            "time": "2016-09-15 04:12:33"
         },
         {
             "name": "paragonie/random_compat",

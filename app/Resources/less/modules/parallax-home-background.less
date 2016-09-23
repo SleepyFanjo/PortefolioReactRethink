@@ -2,87 +2,51 @@
 @secondary-color: #00a4e8;
 
 #parallax-home-background {
-    background-image: url(/images/home-background.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
     height: 100vh;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 700;
     display: flex;
 	justify-content: center;
 	align-items: center;
-}
+    background-color: #1d1f20;
 
-#card {
-    perspective: 800px;
-    width: 400px;
-    height: 550px;
-    position: relative;
-    cursor: pointer;
+    @h1-border-width: 70%;
 
-    span.glyphicon {
-        position: absolute;
-        color: @secondary-color;
-        z-index: 1;
-        font-size: 2.5rem;
-        top: 10px;
-        right: 10px;
-        width: initial;
-    }
-
-    div.card-container {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        transform-style: preserve-3d;
-        transition: transform 1s;
-    }
-
-    div.card-container.flipped {
-        transform: rotateY( 180deg );
-    }
-
-    h1, h2 {
-        margin: 0;
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-        font-size: 4.5rem;
-        text-transform: uppercase;
+    h1 {
         text-align: center;
-        background-color: #1d1f20;
-        padding: 50px 20px;
+        text-transform: uppercase;
+        position: relative;
+        color: @primary-color;
+
+        &:after {
+            content: "";
+            background-color: @box-color;
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - (@h1-border-width / 2));
+            width: @h1-border-width;
+            height: 2px;
+        }
 
         span {
             width: 100%;
             display: block;
             margin-bottom: 20px;
+            font-size: 4.5rem;
             color: @primary-color;
 
             &:last-child {
                 color: @secondary-color;
+                font-family: 'Roboto', sans-serif;
             }
         }
-    }
-
-    h2 {
-        transform: rotateY( 180deg );
-        padding-top: 80px;
     }
 }
 
 @media (min-width: @breakpoint) {
-    #card {
-        width: 768px;
-        height: 383px;
-
-        h2 {
-            padding-top: 50px;
+    #parallax-home-background {
+        h1 > span {
+            font-size: 3.8rem;
         }
     }
 }

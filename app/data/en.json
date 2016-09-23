@@ -1,0 +1,8 @@
+{
+  "header-bar": {
+    "title": "Portefolio",
+    "menu": [
+      "Home", "About Me", "Skills", "Projects"
+    ]
+  }
+}

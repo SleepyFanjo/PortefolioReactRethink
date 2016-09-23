@@ -5,13 +5,19 @@ import {bindActionCreators} from 'redux'
 
 import HomeComponent from '../component/HomeComponent'
 
+@autobind
 class HomeContainer extends Component
 {
     render() {
         return (
-            <HomeComponent />
+            <HomeComponent hello={this.props.hello} />
         )
     }
 }
 
-export default connect(null, null)(HomeContainer)
+const mapStateToProps = (state) => ({
+    hello: state.home.message
+})
+
+export default connect(mapStateToProps, null)(HomeContainer)
+
