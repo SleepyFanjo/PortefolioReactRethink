@@ -10,13 +10,14 @@ class HomeContainer extends Component
 {
     render() {
         return (
-            <HomeComponent hello={this.props.hello} />
+            <HomeComponent textData={this.props.textData} />
         )
     }
 }
 
 const mapStateToProps = (state) => ({
-    hello: state.home.message
+    textData: state.home.textData,
+    locale: state.home.locale
 })
 
 export default connect(mapStateToProps, null)(HomeContainer)

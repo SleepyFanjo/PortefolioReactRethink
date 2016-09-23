@@ -13,7 +13,7 @@ export default class HeaderBar extends Component
             <div id="header">
                 <div id="header-wrapper">
                     <div id="header-intro">
-                        Portefolio
+                        {this.props.textData.title}
                     </div>
                     <div id="header-trigger-button">
                         <div id="header-hamburger" className={this.state.expanded ? 'open' : ''} onClick={() => this.setState({expanded: !this.state.expanded})}>
@@ -25,10 +25,10 @@ export default class HeaderBar extends Component
                 </div>
                 <div id="header-scrolling-menu" className={this.state.expanded ? 'displayed' : ''}>
                     <ul>
-                        <li>Home</li>
-                        <li>About Me</li>
-                        <li>Projects</li>
-                        <li>Contact</li>
+                        <li>{this.props.textData.menu[0]}</li>
+                        <li>{this.props.textData.menu[1]}</li>
+                        <li>{this.props.textData.menu[2]}</li>
+                        <li>{this.props.textData.menu[3]}</li>
                     </ul>
                 </div>
             </div>
