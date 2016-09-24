@@ -11,13 +11,12 @@
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 32px;
-  padding: 16px;
-  text-align: center;
-  width: 64px;
-  height: 64px;
   font-style: normal;
   line-height: normal;
+  text-align: center;
+  font-size: 8vw;
+  width: 8vw;
+  height: 8vw;
 }
 
 .fa-linkedin:before {
@@ -34,4 +33,12 @@
 
 .fa-mail:before {
   content: "\f0e0";
+}
+
+@media (min-width: @breakpoint) {
+  .fa {
+    font-size: 32px;
+    width: 64px;
+    height: 64px;
+  }
 }

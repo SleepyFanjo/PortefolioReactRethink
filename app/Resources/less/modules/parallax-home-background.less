@@ -33,7 +33,7 @@
             width: 100%;
             display: block;
             margin-bottom: 20px;
-            font-size: 4.5rem;
+            font-size: 10vw;
             color: @primary-color;
 
             &:last-child {
@@ -47,8 +47,8 @@
         margin-top: 2vh;
 
         > a {
-            margin-right: 10px;
-            margin-left: 10px;
+            margin-right: 4vw;
+            margin-left: 4vw;
         }
 
         .fa-linkedin {
@@ -69,12 +69,16 @@
     }
 }
 
-@media (min-width: @breakpoint) {
+@media (min-width: 425px) {
     #parallax-home-background {
         h1 > span {
             font-size: 3.8rem;
         }
+    }
+}
 
+@media (min-width: @breakpoint) {
+    #parallax-home-background {
         .icon-wrapper {
             margin-top: 2vh;
 
