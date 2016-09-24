@@ -27,7 +27,7 @@ export default class ParallaxHomeBackground extends Component
                         <a href="https://github.com/SleepyFanjo" title="Github">
                             <i className="fa fa-github"></i> 
                         </a>
-                        <a title="Send me a message">
+                        <a title={this.props.textData.contact.title}>
                             <i className="fa fa-mail"></i>
                         </a>
                     </div>

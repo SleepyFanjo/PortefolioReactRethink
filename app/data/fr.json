@@ -8,6 +8,7 @@
   },
   "homeScreen": {
     "contact": {
+      "title": "Contactez-moi",
       "intro": "N'hesitez pas à me laisser un message, je reviendrai vers vous dés que possible !",
       "fields": {
         "name": "Nom",

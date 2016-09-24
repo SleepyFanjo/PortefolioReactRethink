@@ -8,6 +8,7 @@
   },
   "homeScreen": {
     "contact": {
+      "title": "Send me a message",
       "intro": "Feel free to leave me a message, I will get back to you as soon as possible",
       "fields": {
         "name": "Name",
