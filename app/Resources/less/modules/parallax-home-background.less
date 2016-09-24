@@ -8,6 +8,7 @@
     display: flex;
 	justify-content: center;
 	align-items: center;
+    flex-direction: column;
     background-color: #1d1f20;
 
     @h1-border-width: 70%;
@@ -41,12 +42,68 @@
             }
         }
     }
+
+    .icon-wrapper {
+        margin-top: 2vh;
+
+        > a {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        .fa-linkedin {
+            color: #0077B5;
+        }
+
+        .fa-viadeo {
+            color: #ec7500;
+        }
+
+        .fa-github {
+            color: #000;
+        }
+
+        .fa-mail {
+            color: #d8d8d8;
+        }
+    }
 }
 
 @media (min-width: @breakpoint) {
     #parallax-home-background {
         h1 > span {
             font-size: 3.8rem;
+        }
+
+        .icon-wrapper {
+            margin-top: 2vh;
+
+            > a {
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+
+            .fa-linkedin, .fa-viadeo, .fa-github, .fa-mail {
+                color: #5c7582;
+                transition: cubic-bezier(0.74, 0.13, 0.26, 0.84) 0.3s;
+                transition-property: color;
+            }
+
+            .fa-linkedin:hover {
+                color: #0077B5;
+            }
+
+            .fa-viadeo:hover {
+                color: #ec7500;
+            }
+
+            .fa-github:hover {
+                color: #000;
+            }
+
+            .fa-mail:hover {
+                color: #d8d8d8;
+            }
         }
     }
 }

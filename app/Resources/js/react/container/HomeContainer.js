@@ -10,7 +10,7 @@ class HomeContainer extends Component
 {
     render() {
         return (
-            <HomeComponent textData={this.props.textData} />
+            <HomeComponent textData={this.props.textData} locale={this.props.locale}/>
         )
     }
 }

@@ -5,8 +5,7 @@ import autobind from 'autobind-decorator'
 export default class ParallaxHomeBackground extends Component
 {
     state = {
-        flipped: false,
-        message: ""
+        flipped: false
     }
 
     render() {
@@ -17,6 +16,22 @@ export default class ParallaxHomeBackground extends Component
                     <span>Freelancer</span>
                     <span>FullStack Web Developer</span>
                 </h1>
+                <div className="contact">
+                    <div className="icon-wrapper">
+                        <a href="http://linkedin.com/in/qu3ntin" title="Linkedin">
+                            <i className="fa fa-linkedin"></i>
+                        </a>
+                        <a href="http://viadeo.com/fr/profile/quentin.chevrin" title="Viadeo">
+                            <i className="fa fa-viadeo"></i>
+                        </a>
+                        <a href="https://github.com/SleepyFanjo" title="Github">
+                            <i className="fa fa-github"></i> 
+                        </a>
+                        <a title="Send me a message">
+                            <i className="fa fa-mail"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         )
     }

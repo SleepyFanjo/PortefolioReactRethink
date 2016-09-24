@@ -2,7 +2,19 @@
   "headerBar": {
     "title": "Portefolio",
     "menu": [
-      "Home", "A Propos", "Skills", "Projets"
-    ]
+      "Home", "À Propos", "Skills", "Projets"
+    ],
+    "redirect": "See it in English"
+  },
+  "homeScreen": {
+    "contact": {
+      "intro": "N'hesitez pas à me laisser un message, je reviendrai vers vous dés que possible !",
+      "fields": {
+        "name": "Nom",
+        "email": "Email",
+        "message": "Message",
+        "submit": "Envoyer"
+      }
+    }
   }
 }

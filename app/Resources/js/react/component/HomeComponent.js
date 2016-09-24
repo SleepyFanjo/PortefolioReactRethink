@@ -10,8 +10,8 @@ export default class HomeComponent extends Component
     render() {
         return (
             <div>
-                <HeaderBar textData={this.props.textData.headerBar}/>
-                <ParallaxHomeBackground locale={this.props.locale} />
+                <HeaderBar locale={this.props.locale} textData={this.props.textData.headerBar} />
+                <ParallaxHomeBackground textData={this.props.textData.homeScreen} />
             </div>
         )
     }

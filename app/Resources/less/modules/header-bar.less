@@ -26,7 +26,7 @@
         transition: cubic-bezier(0.54, 0.54, 0.25, 1.04) 0.6s;
         transition-property: top;
         position: absolute;
-        top: -200px;
+        top: -268px;
         left: 0;
         right: 0;
         z-index: 90;
@@ -34,6 +34,15 @@
         ul, li {
             list-style-type: none;
             cursor: pointer;
+
+            > a {
+                display: block;
+            }
+        }
+
+        .flag-icon {
+            width: 2.5rem;
+            line-height: 2rem;
         }
     }
 
@@ -146,10 +155,11 @@
         }
 
         #header-scrolling-menu {
+            width: 490px;
             position: relative;
             top:  auto;
             right: auto;
-            left: -145px;
+            left: -208px;
             padding-left: 0;
             border-top: none;
             border-bottom: none;

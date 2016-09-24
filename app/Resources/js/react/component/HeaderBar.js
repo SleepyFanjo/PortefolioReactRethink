@@ -29,6 +29,11 @@ export default class HeaderBar extends Component
                         <li>{this.props.textData.menu[1]}</li>
                         <li>{this.props.textData.menu[2]}</li>
                         <li>{this.props.textData.menu[3]}</li>
+                        <li>
+                            <a href={this.props.locale === "en" ? "/fr" : "/en"} title={this.props.textData.redirect}>
+                                <span className={"flag-icon flag-icon-"+ (this.props.locale === "en" ? "fr" : "gb")}></span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

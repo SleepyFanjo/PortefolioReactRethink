@@ -23,7 +23,7 @@ class AppController extends Controller
         );
 
         if (!$_locale) {
-            $_locale = $this->detectLocale($request->getClientIp());
+            $_locale = $this->detectLocale($request);
         }
 
         $langData = file_get_contents(__DIR__ . '/../../../app/data/'.$_locale.'.json');
@@ -37,23 +37,8 @@ class AppController extends Controller
        return $this->render('home.html.twig', ["html" => $html, "js" => $js]);
     }
 
-    private function detectLocale($ip)
+    private function detectLocale(Request $request)
     {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, 'http://ipinfo.io/' . $ip);
-        curl_setopt($ch, CURLOPT_TIMEOUT, 3);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-
-        $result = curl_exec($ch);
-        curl_close($ch);
-
-        if ($result) {
-            $data = json_decode($result);
-            if ($data && isset($data->country) && strtolower($data->country) === "fr") {
-                return "fr";
-            }
-        }
-
-        return "en";
+        return $request->getPreferredLanguage(['en', 'fr']);
     }
 }
