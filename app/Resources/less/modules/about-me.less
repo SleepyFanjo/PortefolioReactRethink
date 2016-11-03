@@ -1,0 +1,33 @@
+.about-me {
+  .content {
+    padding: 20px;
+    color: @text-color;
+  }
+}
+
+.separator {
+  height: 1px;
+  background-color: @box-color;
+  margin: 30px auto;
+}
+
+@media (min-width: @breakpoint) {
+  .about-me {
+    .content {
+      display: inline-block;
+      vertical-align: middle;
+      width: calc(100% - 30vw);
+      font-size: 1.5vw;
+    }
+
+    .picture {
+      display: inline-block;
+      vertical-align: middle;
+
+      > img {
+        width: 30vw;
+        height: 30vw;
+      }
+    }
+  }
+}

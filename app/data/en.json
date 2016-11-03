@@ -17,5 +17,12 @@
         "submit": "Submit"
       }
     }
+  },
+  "aboutMe": {
+    "content": [
+      "I am a web developer specialised in Symfony and React with a vast knowledge around the javascript ecosystem, I love React since I started to use it and I am building more and more project with it.",
+      "I am a fast learner and I am passionate about learning, I read articles about everything, not only about new technologies and software development but also mathematics, sciences, business and psychology. I spend my time on TED and Medium just reading and thinking.",
+      "I also spent a year in Australia where I improved my english, learned a new culture and challenged myself in a new life far from home. I play badminton and tennis when I need to get out and free up my mind."
+    ]
   }
 }

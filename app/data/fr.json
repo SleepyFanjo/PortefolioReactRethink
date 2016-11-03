@@ -17,5 +17,13 @@
         "submit": "Envoyer"
       }
     }
+  },
+  "aboutMe": {
+    "content": [
+      "Je suis un développeur web spécialisé sur Symfony et React avec une vaste connaissance autour de Javascript et son écosystème. J’adore React depuis que j’ai commencé à l’utiliser et je construit de plus en plus de projets avec.",
+      "J’apprends très vite et j’adore apprendre, je lis des articles sur tous les sujets, pas seulement à propos des nouvelles technologies et du développement mais aussi sur le business, les mathématiques, la science et la psychologie. Je passes mon temps sur TED et Medium simplement à lire et à réfléchir.",
+      "J’ai aussi passé un an en Australie où j’ai pu améliorer mon anglais, découvrir une autre culture et me challenger dans une nouvelle vie loin de la maison.",
+      "Lorsque j’ai besoin de bouger et de libérer mes pensées je vais jouer au badminton et au tennis."
+    ]
   }
 }
